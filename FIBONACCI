@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		int numero = 0;
+		int fibo = 0;
+		int fibo2 = 1;
+		String msg = "";
+        Scanner s = new Scanner(System.in);
+        
+        System.out.println("Cauculo de FIBONACCI.");
+        System.out.println("Digite um número: ");
+        
+        numero = s.nextInt();
+        
+        System.out.println(fibo);
+        System.out.println(fibo2);
+        
+        for(int i = 0; i <= numero; i++){
+            
+            fibo = fibo + fibo2;
+            fibo2 = fibo - fibo2;
+            
+            System.out.println(fibo);
+            
+            if(fibo == numero){
+                
+                msg = "Você digitou o número: " + numero + ", ele pertence sim a seguencia de FIBONACCI.";
+                
+                break;
+                
+            }else{
+                
+                  msg = "Você digitou o número: " + numero + ", ele não pertence a seguencia de FIBONACCI.";
+            }
+                
+            
+        }
+        
+        System.out.println(msg);
+		
+	}
+}
